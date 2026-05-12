@@ -6,7 +6,8 @@ Program ini saya buat untuk melakukan pencarian produk minimarket menggunakan me
 
 
 c.	Source Code:
- <img width="649" height="893" alt="Screenshot 2026-05-11 222317" src="https://github.com/user-attachments/assets/a82109fa-14e7-4fac-8c56-442ed60d4649" />
+
+<img width="649" height="893" alt="Screenshot 2026-05-11 222317" src="https://github.com/user-attachments/assets/a82109fa-14e7-4fac-8c56-442ed60d4649" />
 
 Penjelasan logika berjalannya kode program:
 1.	def sequential_search(data, n, target): digunakan untuk membuat fungsi pencarian data secara berurutan pada list produk.
@@ -57,7 +58,8 @@ Penjelasan logika berjalannya kode program:
 
 
 d.	Output Program:
- <img width="555" height="126" alt="Screenshot 2026-05-11 222704" src="https://github.com/user-attachments/assets/d6874cef-2aac-4ebd-823d-b33830acc39e" />
+
+<img width="555" height="126" alt="Screenshot 2026-05-11 222704" src="https://github.com/user-attachments/assets/d6874cef-2aac-4ebd-823d-b33830acc39e" />
  
 Penjelasan Output :
 Berdasarkan hasil output program, proses pencarian data berhasil dijalankan menggunakan metode Sequential Search. Pertama, program menampilkan daftar produk minimarket yang tersedia, yaitu Air Mineral, Teh, Kopi, Susu Putih, Susu Cokelat, dan Jus. Setelah itu, pengguna diminta memasukkan nama produk yang ingin dicari. Pada contoh output, saya memasukkan produk “Susu Cokelat”. Program kemudian melakukan pencarian secara berurutan mulai dari data pertama hingga data terakhir sampai produk ditemukan. Karena produk “Susu Cokelat” terdapat satu kali pada list, maka program menampilkan pesan bahwa produk tersebut ditemukan sebanyak 1 kali. Dari hasil tersebut dapat diketahui bahwa metode Sequential Search bekerja dengan cara mengecek data satu per satu secara berurutan hingga data yang dicari berhasil ditemukan.
