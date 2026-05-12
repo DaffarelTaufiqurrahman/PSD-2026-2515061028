@@ -60,3 +60,7 @@ Penjelasan Output :
 Berdasarkan hasil output program, proses pencarian data berhasil dijalankan menggunakan metode Sequential Search. Pertama, program menampilkan daftar produk minimarket yang tersedia, yaitu Air Mineral, Teh, Kopi, Susu Putih, Susu Cokelat, dan Jus. Setelah itu, pengguna diminta memasukkan nama produk yang ingin dicari. Pada contoh output, saya memasukkan produk “Susu Cokelat”. Program kemudian melakukan pencarian secara berurutan mulai dari data pertama hingga data terakhir sampai produk ditemukan. Karena produk “Susu Cokelat” terdapat satu kali pada list, maka program menampilkan pesan bahwa produk tersebut ditemukan sebanyak 1 kali. Dari hasil tersebut dapat diketahui bahwa metode Sequential Search bekerja dengan cara mengecek data satu per satu secara berurutan hingga data yang dicari berhasil ditemukan.
 
 e. Link YouTube: https://youtu.be/r0ZMJ5GKLxE?si=Ndvbog6iWbPszM0q
+
+
+MENGIMPLEMENTASIKAN RUMUS YANG ADA DI BINARY SEARCHING INTERPOLATION:
+<img width="1148" height="1600" alt="Daffarel Taufiqurrahman_2515060128_PSD-C" src="https://github.com/user-attachments/assets/67ad7325-e608-49a3-9503-637ef93992df" />
