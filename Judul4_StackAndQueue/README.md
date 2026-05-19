@@ -15,7 +15,7 @@ c.	Source Code:
  
 Penjelasan logika berjalannya kode program:
 1.	Pada baris ini dibuat class Node untuk menyimpan data tiket. 
-2.	Method __init__ dibuat sebagai constructor pada class Node. 
+2.	Method __init__ dibuat untuk membuat data awal pada class Node.
 3.	Baris ini digunakan untuk menyimpan data tiket ke dalam variabel data. 
 4.	next diatur bernilai None karena node belum terhubung dengan node lain. 
 5.	
@@ -139,4 +139,5 @@ Kemudian dipilih menu 4 untuk menampilkan seluruh tiket yang ada pada stack. Out
 
 Setelah itu dipilih menu 5 untuk menghitung jumlah tiket yang tersimpan di dalam stack. Program menampilkan output “Jumlah tiket: 2”, yang berarti terdapat dua data tiket yang berhasil disimpan. Dari output tersebut dapat dilihat bahwa program stack linked list berhasil menjalankan fungsi push, peek, display, dan count sesuai konsep stack.
 
-e. Link YouTube: 
+
+e. Link YouTube: https://youtu.be/cdUan2AmvEU?si=cuNf0R6g3af7jnvW
