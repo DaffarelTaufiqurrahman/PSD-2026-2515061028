@@ -1,20 +1,27 @@
 a.	Judul Program: Pendataan Tinggi Badan Mahasiswa Menggunakan Binary Search Tree Dasar
 
-
 b.	Deskripsi Singkat: 
 Program ini dibuat untuk mengelola data tinggi badan mahasiswa menggunakan struktur data Binary Search Tree atau BST. Program dapat digunakan untuk menambahkan data tinggi badan mahasiswa, mencari data tertentu, menampilkan data menggunakan traversal inorder, preorder, dan postorder, mencari nilai minimum dan maksimum, menghitung jumlah mahasiswa, serta menghitung total seluruh tinggi badan mahasiswa yang tersimpan pada tree. Dengan adanya program ini, proses pengelolaan data tinggi badan mahasiswa menjadi lebih terstruktur dan mudah dilakukan.
 
 Algoritma yang diterapkan pada program ini adalah Binary Search Tree (BST), yaitu struktur data berbentuk pohon biner yang memiliki aturan bahwa nilai yang lebih kecil ditempatkan di subtree kiri dan nilai yang lebih besar ditempatkan di subtree kanan. Struktur data BST digunakan karena mampu mempercepat proses pencarian dan pengolahan data dibandingkan pencarian biasa. Selain itu, BST juga mempermudah proses pengurutan data secara otomatis sehingga data tinggi badan mahasiswa dapat ditampilkan secara terurut.
 
-
 c.	Source Code:
+
+
 <img width="484" height="911" alt="Screenshot 2026-05-26 063257" src="https://github.com/user-attachments/assets/b3f25f66-f035-4192-beeb-e393caafe9b7" />
+
+
 <img width="607" height="873" alt="Screenshot 2026-05-26 063330" src="https://github.com/user-attachments/assets/40a3092b-f884-411d-ab80-fce75de5a441" />
+
+
 <img width="571" height="892" alt="Screenshot 2026-05-26 063356" src="https://github.com/user-attachments/assets/dabb4fcc-62f3-4286-8b63-fab22c1a719b" />
+
+
 <img width="526" height="284" alt="Screenshot 2026-05-26 063428" src="https://github.com/user-attachments/assets/a722437a-f3b9-4cf4-9c32-a342e49b8796" />
+
  
 Penjelasan logika berjalannya kode program:
-1.		Mendefinisikan class Node sebagai struktur dasar untuk menyimpan data tinggi badan mahasiswa pada Binary Search Tree. 
+1.	Mendefinisikan class Node sebagai struktur dasar untuk menyimpan data tinggi badan mahasiswa pada Binary Search Tree. 
 2.	Mendefinisikan constructor untuk menginisialisasi isi node saat objek dibuat. 
 3.	Menyimpan nilai tinggi badan mahasiswa ke dalam atribut tinggi sebagai data utama node. 
 4.	Menginisialisasi child kiri dengan nilai kosong (None) yang nantinya digunakan untuk menyimpan data lebih kecil dari root. 
@@ -194,10 +201,15 @@ Penjelasan logika berjalannya kode program:
 178.	Mengecek apakah file dijalankan langsung sebagai program utama Python. 
 179.	Menjalankan fungsi main() untuk memulai keseluruhan program BST Tinggi Badan Mahasiswa. 
 
-
 d.	Output Program:
+
+
 <img width="328" height="902" alt="Screenshot 2026-05-26 065556" src="https://github.com/user-attachments/assets/1b68d8ab-2648-4d57-8948-905187ab35ba" />
+
+
 <img width="256" height="837" alt="Screenshot 2026-05-26 065616" src="https://github.com/user-attachments/assets/e51223d2-f086-4d3d-b7b0-9b05d86cd58f" />
+
+
 <img width="282" height="850" alt="Screenshot 2026-05-26 065632" src="https://github.com/user-attachments/assets/a48d3645-2f8f-4c83-8e5b-84984825a2c0" />
 
 
