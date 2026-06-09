@@ -25,158 +25,158 @@ c.	Source Code:
 
  
 Penjelasan logika berjalannya kode program:
-1.	Pada bagian ini dibuat class SlotState untuk menyimpan status slot pada hash table.
-2. Status EMPTY digunakan untuk menandai slot yang masih kosong.
-3. Status OCCUPIED digunakan untuk menandai slot yang sudah terisi data.
-4. Status DELETED digunakan untuk menandai data yang sudah dihapus.
+1. Mendefinisikan class SlotState untuk menyimpan status setiap slot pada hash table.
+2. Mendefinisikan status EMPTY dengan nilai 0 sebagai penanda slot kosong.
+3. Mendefinisikan status OCCUPIED dengan nilai 1 sebagai penanda slot yang berisi data pelanggan.
+4. Mendefinisikan status DELETED dengan nilai 2 sebagai penanda slot yang datanya telah dihapus.
 5.
 6.
-7. Pada bagian ini dibuat class Entry untuk menyimpan data pada setiap slot hash table.
-8. Method constructor dibuat untuk menginisialisasi data awal pada class Entry.
-9. Variabel key diatur bernilai None sebagai nilai awal.
-10. Variabel value diatur bernilai None sebagai nilai awal.
-11. Status awal slot diatur menjadi EMPTY atau kosong.
+7. Mendefinisikan class Entry sebagai tempat penyimpanan data pelanggan pada setiap slot hash table.
+8. Mendefinisikan constructor untuk menginisialisasi data awal pada objek Entry.
+9. Menginisialisasi atribut key dengan nilai kosong (None).
+10. Menginisialisasi atribut value dengan nilai kosong (None).
+11. Menginisialisasi status awal slot sebagai EMPTY.
 12.
 13.
-14. Constructor dibuat pada class HashMapOpenAddressing.
-15. Parameter size digunakan untuk menentukan ukuran hash table.
-16. Nilai ukuran tabel disimpan ke variabel SIZE.
-17. Membuat tabel hash berisi slot kosong sebanyak ukuran yang ditentukan.
+14. Mendefinisikan class HashMapOpenAddressing sebagai class utama pengelola hash table.
+15. Mendefinisikan constructor untuk membuat hash table.
+16. Menyimpan ukuran hash table ke dalam atribut SIZE.
+17. Membuat sejumlah slot kosong sesuai ukuran hash table yang ditentukan.
 18.
-19. Method hash_function() dibuat untuk menentukan indeks penyimpanan data.
-20. Operasi modulo digunakan untuk menghasilkan indeks hash.
+19. Mendefinisikan fungsi hash_function() untuk menentukan posisi penyimpanan data.
+20. Menghasilkan indeks hash menggunakan operasi modulo terhadap ukuran tabel.
 21.
-22. Method insert() dibuat untuk memasukkan pelanggan ke hash table.
-23. Menghitung indeks awal berdasarkan hash function.
-24. Variabel first_deleted digunakan untuk menyimpan posisi deleted pertama.
+22. Mendefinisikan fungsi insert() untuk menambahkan pelanggan ke hash table.
+23. Menentukan indeks awal penyimpanan berdasarkan nomor pelanggan.
+24. Menginisialisasi variabel untuk menyimpan posisi slot yang pernah dihapus.
 25.
-26. Dilakukan perulangan untuk mencari slot kosong atau slot tersedia.
+26. Melakukan perulangan untuk mencari slot yang dapat digunakan.
 27.
-28. Posisi slot dihitung menggunakan linear probing.
+28. Menghitung posisi slot menggunakan metode Linear Probing.
 29.
-30. Mengecek apakah slot sedang terisi data.
+30. Memeriksa apakah slot saat ini sudah terisi data pelanggan.
 31.
-32. Mengecek apakah nomor pelanggan sudah ada sebelumnya.
-33. Jika key ditemukan, value diperbarui dengan data baru.
-34. Mengembalikan nilai True jika update berhasil.
+32. Memeriksa apakah nomor pelanggan yang dimasukkan sudah ada di dalam hash table.
+33. Memperbarui nama pelanggan jika nomor pelanggan sudah ditemukan.
+34. Mengembalikan nilai True sebagai tanda proses berhasil.
 35.
-36. Mengecek apakah slot berstatus deleted.
+36. Memeriksa apakah slot saat ini berstatus DELETED.
 37.
-38. Memastikan belum ada slot deleted yang tersimpan sebelumnya.
-39. Menyimpan posisi deleted pertama yang ditemukan.
+38. Memeriksa apakah belum ada slot deleted yang tersimpan sebelumnya.
+39. Menyimpan posisi slot deleted pertama yang ditemukan.
 40.
-41. Kondisi ini dijalankan ketika slot kosong ditemukan.
+41. Menjalankan kondisi ketika slot kosong ditemukan.
 42.
-43. Mengecek apakah sebelumnya ditemukan slot deleted.
-44. Jika ada slot deleted, posisi insert dipindahkan ke slot tersebut.
+43. Memeriksa apakah terdapat slot deleted yang dapat digunakan kembali.
+44. Menggunakan slot deleted sebagai lokasi penyimpanan data baru.
 45.
-46. Menyimpan nomor pelanggan ke key slot.
-47. Menyimpan nama pelanggan ke value slot.
+46. Menyimpan nomor pelanggan ke dalam slot.
+47. Menyimpan nama pelanggan ke dalam slot.
 48. Mengubah status slot menjadi OCCUPIED.
 49.
-50. Mengembalikan True jika data berhasil dimasukkan.
+50. Mengembalikan nilai True sebagai tanda data berhasil ditambahkan.
 51.
-52. Mengembalikan False jika tabel penuh atau insert gagal.
+52. Mengembalikan nilai False jika proses insert gagal.
 53.
-54. Method search() dibuat untuk mencari pelanggan berdasarkan nomor pelanggan.
+54. Mendefinisikan fungsi search() untuk mencari data pelanggan.
 55.
-56. Menghitung indeks awal menggunakan hash function.
+56. Menentukan indeks awal pencarian berdasarkan nomor pelanggan.
 57.
-58. Melakukan perulangan untuk proses pencarian.
+58. Melakukan perulangan untuk proses pencarian data.
 59.
-60. Menghitung posisi menggunakan linear probing.
+60. Menghitung posisi pencarian menggunakan Linear Probing.
 61.
-62. Mengecek apakah slot kosong ditemukan.
-63. Jika slot kosong, data dianggap tidak ada.
+62. Memeriksa apakah slot yang diperiksa masih kosong.
+63. Mengembalikan nilai None jika data tidak ditemukan.
 64.
-65. Mengecek apakah slot berisi data dan key sesuai.
-66. Membandingkan key tabel dengan nomor pelanggan yang dicari.
+65. Memeriksa apakah slot berisi data dan nomor pelanggan sesuai dengan data yang dicari.
+66. Membandingkan nomor pelanggan yang dicari dengan data pada slot saat ini.
 67.
 68. Mengembalikan data pelanggan jika ditemukan.
 69.
-70. Mengembalikan None jika data tidak ditemukan.
+70. Mengembalikan nilai None apabila pencarian tidak menemukan data.
 71.
-72. Method remove_key() dibuat untuk menghapus pelanggan.
+72. Mendefinisikan fungsi remove_key() untuk menghapus data pelanggan.
 73.
-74. Mencari data pelanggan sebelum proses penghapusan.
+74. Melakukan pencarian data pelanggan yang akan dihapus.
 75.
-76. Mengecek apakah data ditemukan.
-77. Mengembalikan False jika data tidak ada.
+76. Memeriksa apakah data pelanggan ditemukan.
+77. Mengembalikan nilai False jika data tidak ditemukan.
 78.
-79. Mengubah status slot menjadi deleted.
+79. Mengubah status slot menjadi DELETED.
 80.
-81. Mengembalikan True jika penghapusan berhasil.
+81. Mengembalikan nilai True sebagai tanda penghapusan berhasil.
 82.
-83. Method display() dibuat untuk menampilkan isi hash table.
+83. Mendefinisikan fungsi display() untuk menampilkan isi hash table.
 84.
-85. Menampilkan judul output hash table.
+85. Menampilkan judul tampilan posisi antrian kasir minimarket.
 86.
-87. Melakukan perulangan untuk menampilkan semua slot.
+87. Melakukan perulangan untuk menampilkan seluruh slot hash table.
 88.
-89. Menampilkan nomor indeks atau nomor kasir.
+89. Menampilkan nomor kasir atau indeks slot yang sedang diperiksa.
 90.
-91. Mengecek apakah slot kosong.
+91. Memeriksa apakah slot berstatus kosong.
 92.
-93. Menampilkan tulisan “Kosong”.
+93. Menampilkan tulisan "Kosong" jika slot belum berisi pelanggan.
 94.
-95. Mengecek apakah slot deleted.
+95. Memeriksa apakah slot berstatus DELETED.
 96.
-97. Menampilkan tulisan “Antrian Dihapus”.
+97. Menampilkan tulisan "Antrian Dihapus" jika data pelanggan telah dihapus.
 98.
-99. Kondisi jika slot berisi data pelanggan.
+99. Menjalankan kondisi jika slot berisi data pelanggan.
 100.
-101. Menampilkan output data pelanggan.
-102. Menampilkan nomor pelanggan beserta nama pelanggan.
-103. Menutup perintah output.
+101. Menampilkan informasi data pelanggan yang tersimpan pada slot.
+102. Menampilkan nomor pelanggan dan nama pelanggan.
+103. Menutup perintah output data pelanggan.
 104.
 105.
-106. Membuat fungsi utama program.
+106. Mendefinisikan fungsi utama program.
 107.
 108. Membuat objek hash map bernama kasir.
 109.
-110. Menambahkan pelanggan nomor 15 dengan nama Budi.
-111. Menambahkan pelanggan nomor 25 dengan nama Citra.
-112. Menambahkan pelanggan nomor 8 dengan nama Dina.
-113. Menambahkan pelanggan nomor 5 dengan nama Andi.
+110. Menambahkan pelanggan nomor 5 dengan nama Andi ke dalam hash table.
+111. Menambahkan pelanggan nomor 15 dengan nama Budi ke dalam hash table.
+112. Menambahkan pelanggan nomor 25 dengan nama Citra ke dalam hash table.
+113. Menambahkan pelanggan nomor 8 dengan nama Dina ke dalam hash table.
 114.
-115. Menampilkan teks “Data awal”.
-116. Menampilkan isi hash table awal.
+115. Menampilkan teks "Data awal".
+116. Menampilkan isi hash table setelah data pelanggan dimasukkan.
 117.
-118. Melakukan pencarian pelanggan nomor 15.
+118. Melakukan pencarian terhadap pelanggan nomor 15.
 119.
-120. Mengecek apakah pelanggan ditemukan.
+120. Memeriksa apakah pelanggan nomor 15 berhasil ditemukan.
 121.
-122. Menampilkan informasi pelanggan ditemukan.
+122. Menampilkan informasi bahwa pelanggan ditemukan.
 123. Menampilkan nomor pelanggan yang ditemukan.
 124. Menampilkan nama pelanggan yang ditemukan.
-125. Menutup output print.
+125. Menutup perintah output informasi pelanggan.
 126.
-127. Menampilkan pesan jika pelanggan tidak ditemukan.
+127. Menjalankan kondisi jika pelanggan tidak ditemukan.
 128.
-129. Menghapus pelanggan nomor 15.
+129. Menampilkan pesan bahwa pelanggan tidak ditemukan.
 130.
-131. Menampilkan informasi setelah penghapusan data.
+131. Menghapus data pelanggan nomor 15 dari hash table.
 132.
-133. Menampilkan isi hash table terbaru.
+133. Menampilkan informasi bahwa pelanggan nomor 15 telah keluar dari antrian.
 134.
-135. Melakukan pencarian pelanggan nomor 25.
+135. Menampilkan kembali isi hash table setelah penghapusan data.
 136.
-137. Mengecek apakah pelanggan masih ada setelah penghapusan data lain.
+137. Melakukan pencarian terhadap pelanggan nomor 25.
 138.
-139. Menampilkan informasi bahwa pelanggan masih ditemukan.
+139. Memeriksa apakah pelanggan nomor 25 masih ditemukan.
 140.
-141. Menampilkan nomor pelanggan.
-142. Menampilkan nama pelanggan.
-143. Menutup output print.
-144. Kondisi jika pelanggan tidak ditemukan.
+141. Menampilkan informasi bahwa pelanggan nomor 25 masih ditemukan.
+142. Menampilkan nomor pelanggan yang ditemukan.
+143. Menampilkan nama pelanggan yang ditemukan.
+144. Menutup perintah output informasi pelanggan.
 145.
-146. Menampilkan pesan pelanggan tidak ditemukan.
+146. Menjalankan kondisi jika pelanggan nomor 25 tidak ditemukan.
 147.
-148. Penutup blok kondisi terakhir.
+148. Menampilkan pesan bahwa pelanggan tidak ditemukan.
 149.
 150.
-151. Mengecek apakah file dijalankan langsung sebagai program utama.
-152. Menjalankan fungsi main().
+151. Memeriksa apakah file dijalankan sebagai program utama.
+152. Menjalankan fungsi main() untuk memulai seluruh proses program.
 
 
 d.	Output Program:
@@ -190,4 +190,4 @@ Output program menunjukkan bagaimana Hash Map Open Addressing dengan metode Line
 Selanjutnya, program melakukan pencarian pelanggan nomor 15 dan berhasil menemukan data pelanggan dengan nama Budi. Setelah itu, pelanggan nomor 15 dihapus sehingga slotnya berubah menjadi Antrian Dihapus atau DELETED, bukan langsung kosong, agar pencarian data lain tetap berjalan dengan baik. Hal ini terlihat ketika pelanggan nomor 25 masih berhasil ditemukan meskipun sebelumnya terjadi collision dan salah satu data sudah dihapus. Dari hasil tersebut dapat dilihat bahwa metode Linear Probing mampu menangani collision, pencarian, dan penghapusan data dengan baik.
 
 
-e.	Link YouTube: 
+e.	Link YouTube: https://youtu.be/pzEzzvG_IcU?si=WEgxfOGuCnJUH0a5
